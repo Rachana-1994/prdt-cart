@@ -1,0 +1,47 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+/*.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}*/
+.ui{
+  width: 100%;
+  
+}  .carticon {
+  position:absolute;
+  right:4px;
+   background-color: darkblue; 
+    }
+    
+    mat-toolbar a{
+     display: inline-block;
+     margin:0 10px;
+     color: white;
+    text-decoration: none;
+      
+      
+       
+        }
+/*width:4px;
+position:absolute;
+width:10px;
+    height:10px;
+top:1;
+    right:2; 
+.icon {
+  position: relative;
+  top: 14px;
+  right: -10px;
+  z-index: 9999;
+}*/
