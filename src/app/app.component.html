@@ -1,6 +1,12 @@
-<app-my-nav></app-my-nav>
+<!--<app-my-nav></app-my-nav>-->
 <!--a [routerLink]="['/product']">Products</a> |
 <a [routerLink]="['/cart']">Cart</a>
 
 <br><br>
 <router-outlet></router-outlet>-->
+<span *ngIf="clicked; else loginheader">testtt
+        <app-menu> </app-menu>
+    </span>
+    <ng-template #loginheader>
+        <app-login-page></app-login-page>
+    </ng-template>

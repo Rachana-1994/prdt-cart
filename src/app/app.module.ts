@@ -6,6 +6,7 @@ import { IndexComponent } from './index/index.component';
 import { CartComponent } from './cart/cart.component';
 import { routing } from './app-routing.module';
 import { ProductService } from './product.service';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -23,7 +24,16 @@ import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { CustomerLoginComponent } from './customer-login/customer-login.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { MenuHeaderComponent } from './menu-header/menu-header.component';
+import { MenuComponent } from './menu/menu.component';
+import { NewRegisterComponent } from './new-register/new-register.component';
+import { ConfirmEqualValidatorDirective } from './shared/required-validator.directive';
+import { FormsModule } from '@angular/forms';
+import { MenuService } from './menu.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +43,15 @@ import { MatSortModule } from '@angular/material/sort';
     CartComponent,
     MyNavComponent,
     MyDashboardComponent,
-    MyTableComponent
+    MyTableComponent,
+    AdminLoginComponent,
+    CustomerLoginComponent,
+    HeaderComponent,
+    LoginPageComponent,
+    MenuHeaderComponent,
+    MenuComponent,
+    NewRegisterComponent,
+    ConfirmEqualValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -51,10 +69,13 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTabsModule
-   
+    FormsModule,
+    MatTabsModule 
   ],
-  providers: [ProductService],
+ // providers: [ProductService],
+ 
+ exports: [RouterModule],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
